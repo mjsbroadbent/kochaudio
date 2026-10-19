@@ -41,3 +41,6 @@ Add an object to `gigs` in `data.js`:
 
 Add to `releases` (canon releases only); `p` is the ℗ year, `label` the label of record, `noteKey` an optional
 `notes` entry in `i18n.js`. The ℗ line is built as "℗ <p> <label> under exclusive licence to Köch Audio".
+Optional `links` maps a platform name from `platforms` to the real album URL (only for releases that are really up);
+those platforms show as links, the rest as plain text. Jolchu has Spotify, Apple Music and YouTube Music (Yandex
+Music couldn't be checked from outside its region; the album is also on Amazon Music and TIDAL).

@@ -72,7 +72,10 @@
         '<div class="rmain"><h3>' + esc(r.title) + (r.alt ? ' <span class="alt">(' + esc(r.alt) + ")</span>" : "") + "</h3>" +
         '<p class="rart">' + esc(r.artist) + ' <span class="rtype">' + esc(t.type[r.type]) + "</span></p>" + note +
         '<p class="pl">℗ ' + r.p + " " + esc(r.label) + " under exclusive licence to Köch Audio</p></div>" +
-        '<div class="rlisten"><span class="lo">' + esc(t.listenOn) + "</span>" + D.platforms.map(function (p) { return '<span class="pf">' + esc(p) + "</span>"; }).join("") + "</div></li>";
+        '<div class="rlisten"><span class="lo">' + esc(t.listenOn) + "</span>" + D.platforms.map(function (p) {
+          var u = r.links && r.links[p];
+          return u ? '<a class="pf" href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(p) + "</a>" : '<span class="pf">' + esc(p) + "</span>";
+        }).join("") + "</div></li>";
     }).join("");
     $("#faq").innerHTML = t.faq.map(function (f) {
       return "<details><summary>" + esc(f[0]) + "</summary><p>" + f[1] + "</p></details>";

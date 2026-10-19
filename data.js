@@ -28,7 +28,12 @@ window.KOCH = {
     { artist: "Kök Bel", title: "Zhylky Jyly", year: 2002, type: "album", label: "Ak Jol Records", p: 2002 },
     { artist: "Karakush", title: "Umay", year: 2018, type: "single", label: "Kök Ay Media", p: 2018, noteKey: "nOutsideKorea" },
     { artist: "tüntolk", title: "White Stallion in Fog", alt: "Tumandagy Ak At", year: 2017, date: "2017-03-21", type: "album", label: "Tündük Records", p: 2017 },
-    { artist: "tüntolk", title: "Jolchu", year: 2017, type: "album", label: "Tündük Records", p: 2017, noteKey: "nJolchu" }
+    { artist: "tüntolk", title: "Jolchu", year: 2017, type: "album", label: "Tündük Records", p: 2017, noteKey: "nJolchu",
+      links: {
+        "Spotify": "https://open.spotify.com/album/3ZQN63iqNCCuUrhaNGlqCb",
+        "Apple Music": "https://music.apple.com/album/jolchu/6824429029",
+        "YouTube Music": "https://music.youtube.com/playlist?list=OLAK5uy_kbLAnf8vnG9tpkNaY4DgXdTjvgmUVbPQ8"
+      } }
   ],
 
   gigs: [
