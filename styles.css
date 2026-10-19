@@ -1,14 +1,15 @@
 :root {
-  --paper: #E6E9ED;
-  --sheet: #F4F5F7;
-  --ink: #1B1F2A;
-  --soft: #4E5566;
-  --kok: #23408E;
-  --kok-deep: #182E68;
-  --sticker: #F1C232;
-  --rule: #B7BDC8;
-  --display: "Unbounded", "Golos Text", system-ui, sans-serif;
-  --body: "Golos Text", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --paper: #EEE7DA;      /* undyed felt */
+  --sheet: #F8F3EA;
+  --ink: #241D18;        /* walnut */
+  --soft: #62574C;
+  --kok: #A3401D;        /* madder, the shyrdak red */
+  --kok-deep: #7C2E13;
+  --kok-light: #EDA27C;  /* madder on dark ground */
+  --sticker: #2F6152;    /* pine */
+  --rule: #CDBEA8;
+  --display: "Rubik", "IBM Plex Sans", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
@@ -28,11 +29,11 @@ p { margin: 0 0 12px; }
 .lead { font-size: 19px; max-width: 62ch; color: var(--ink); }
 
 /* ---------- header ---------- */
-.top { background: var(--kok); color: #fff; }
+.top { background: var(--ink); color: #fff; }
 .top-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 14px; padding-bottom: 10px; flex-wrap: wrap; }
 .mark { display: flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
-.disc { width: 30px; height: 30px; fill: none; stroke: var(--sticker); stroke-width: 3; }
-.disc circle + circle { fill: var(--sticker); stroke: none; }
+.disc { width: 30px; height: 30px; fill: none; stroke: var(--kok-light); stroke-width: 3; }
+.disc circle + circle { fill: var(--kok-light); stroke: none; }
 .word { font: 800 26px/1 var(--display); letter-spacing: -0.02em; }
 .word .sub { font-weight: 400; font-size: 14px; margin-left: 6px; letter-spacing: 0.02em; opacity: .85; }
 .langs { display: flex; gap: 2px; }
@@ -41,7 +42,7 @@ p { margin: 0 0 12px; }
   padding: 5px 10px; border-radius: 4px; cursor: pointer;
 }
 .langs button[aria-pressed="true"] { border-color: rgba(255,255,255,.55); }
-.langs button:hover { background: var(--kok-deep); }
+.langs button:hover { background: #3B3029; }
 .nav { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; }
 .nav::-webkit-scrollbar { display: none; }
 .nav a {
@@ -49,7 +50,7 @@ p { margin: 0 0 12px; }
   border-bottom: 4px solid transparent;
 }
 .nav a:hover { border-bottom-color: rgba(255,255,255,.35); }
-.nav a[aria-current="page"] { border-bottom-color: var(--sticker); }
+.nav a[aria-current="page"] { border-bottom-color: var(--kok-light); }
 
 /* ---------- home ---------- */
 .hero { padding-top: 56px; padding-bottom: 36px; }
@@ -91,7 +92,7 @@ p { margin: 0 0 12px; }
 .rmain h3 { font-size: 19px; }
 .alt { font-family: var(--body); font-weight: 400; color: var(--soft); font-size: 15px; }
 .rart { margin: 4px 0 6px; font-weight: 500; }
-.rtype { display: inline-block; font-size: 12px; font-weight: 600; background: var(--sticker); color: var(--ink); padding: 1px 7px; border-radius: 3px; margin-left: 6px; vertical-align: 2px; }
+.rtype { display: inline-block; font-size: 12px; font-weight: 600; background: var(--sticker); color: #fff; padding: 1px 7px; border-radius: 3px; margin-left: 6px; vertical-align: 2px; }
 .rnote { color: var(--soft); font-size: 15px; margin-bottom: 6px; }
 .pl { font-size: 13px; color: var(--soft); margin: 0; }
 .rlisten { font-size: 14px; color: var(--ink); line-height: 1.6; }
@@ -110,7 +111,7 @@ p { margin: 0 0 12px; }
 .gdate .wd { color: var(--soft); font-size: 14px; }
 .gk { font-size: 13px; font-weight: 600; margin: 0 0 4px; display: inline-block; padding: 1px 8px; border-radius: 3px; }
 .gig.abroad .gk { border: 1.5px solid var(--kok); color: var(--kok); }
-.gig.home .gk { background: var(--sticker); color: var(--ink); }
+.gig.home .gk { background: var(--sticker); color: #fff; }
 .gmain h3 { font-size: 20px; }
 .guest { font-family: var(--body); font-weight: 400; font-size: 16px; color: var(--soft); }
 .gplace { margin: 6px 0; }
@@ -151,8 +152,8 @@ dialog h3 { font-size: 19px; margin-bottom: 8px; }
 #about p { max-width: 66ch; }
 
 /* ---------- footer ---------- */
-.foot { margin-top: 72px; background: var(--ink); color: #D4D8E0; padding: 28px 0 32px; }
-.foot-tag { font: 600 18px var(--display); color: var(--sticker); margin-bottom: 6px; }
+.foot { margin-top: 72px; background: var(--ink); color: #DCD2C4; padding: 28px 0 32px; }
+.foot-tag { font: 600 18px var(--display); color: var(--kok-light); margin-bottom: 6px; }
 .foot-copy { font-size: 14px; margin: 0; }
 
 /* ---------- small screens ---------- */
