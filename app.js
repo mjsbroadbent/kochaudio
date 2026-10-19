@@ -75,7 +75,7 @@
         '<div class="rlisten"><span class="lo">' + esc(t.listenOn) + "</span>" + D.platforms.map(function (p) { return '<span class="pf">' + esc(p) + "</span>"; }).join("") + "</div></li>";
     }).join("");
     $("#faq").innerHTML = t.faq.map(function (f) {
-      return "<details><summary>" + esc(f[0]) + "</summary><p>" + esc(f[1]) + "</p></details>";
+      return "<details><summary>" + esc(f[0]) + "</summary><p>" + f[1] + "</p></details>";
     }).join("");
   }
 
@@ -140,7 +140,7 @@
   function renderAbout() { $("#about").innerHTML = T().about.map(function (s) { return "<p>" + s + "</p>"; }).join(""); }
 
   /* ---------- language + routing ---------- */
-  var RICH = { forms: 1, name: 1 };
+  var RICH = { forms: 1, name: 1, shNote: 1 };
   function applyStatic() {
     var t = T();
     document.documentElement.lang = I18N.htmlLang[LANG];

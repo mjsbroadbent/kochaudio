@@ -23,6 +23,7 @@ window.KOCH_I18N = {
     nextH: "Next dates", allDates: "All dates",
 
     catH: "Catalogue",
+    shNote: "<b>Looking for <i>Swift Hooves</i>?</b> Everyone asks, so: we don't have the rights to it. The 1993 album belongs to Halyard Music Group, who release it themselves. HMG has no website, but the album is <a href=\"https://open.spotify.com/album/15KyNnIjfJG23v9U2u89AW\" rel=\"noopener\" target=\"_blank\">on Spotify</a>. Its rights in the former Soviet Union sit with a Moscow sub-publisher, so it won't play from Irad or from here in Bishkek.",
     catLead: "A selection of the {n} or so releases we distribute. Everything here is on the platforms listed; search the artist's name.",
     filterAll: "All artists",
     listenOn: "Listen on",
@@ -38,7 +39,7 @@ window.KOCH_I18N = {
     },
     faqH: "Why isn't it here?",
     faq: [
-      ["Swift Hooves", "The 1993 compilation belongs to Halyard Music Group, who release it themselves. Its rights in the former Soviet Union sit with a Moscow sub-publisher, so it is not available in our region and does not play in Irad. We have nothing to do with it."],
+      ["Swift Hooves", "We don't have the rights. The 1993 compilation belongs to Halyard Music Group, who release it themselves; they have no website, but the album is <a href=\"https://open.spotify.com/album/15KyNnIjfJG23v9U2u89AW\" rel=\"noopener\" target=\"_blank\">on Spotify</a>. Its rights in the former Soviet Union sit with a Moscow sub-publisher, so it is not available in our region and does not play in Irad."],
       ["tüntolk's Zvezda Irad and Kara Suu", "These two came out on Dala Sound and are distributed from Almaty by Dala Sound, not by us. Jolchu, White Stallion in Fog and Umay are ours."],
       ["Why does it say Kyrgyzstan?", "We are the registrant, and we are a Kyrgyz company, so every release gets a KG ISRC and Kyrgyzstan as the label country. The music is Iradi. It is only the forms."],
       ["I can't pay for a subscription from Irad", "Som cards can't pay the platforms. In Irad most people listen on the free tiers, which still pay the artists something per stream."]
@@ -140,6 +141,7 @@ window.KOCH_I18N = {
     nextH: "Jakınkı konsertter", allDates: "Bardık daturlar",
 
     catH: "Katalog",
+    shNote: "<b><i>Swift Hooves</i>'tu izdep jatasızbı?</b> Baarı surayt, oshondon: bizde aga ukuk jok. 1993-jılkı albom Halyard Music Group'ka taandık, alar özdörü chıgarat. HMG'nin saytı jok, birok albom <a href=\"https://open.spotify.com/album/15KyNnIjfJG23v9U2u89AW\" rel=\"noopener\" target=\"_blank\">Spotify'da</a> bar. Murdagı SSSR boyuncha ukuktar Moskvadagı sub-pablisherge taandık, oshondon Iraddan da, bul jerden, Bishkekten da oynoboyt.",
     catLead: "Biz taratkan {n}gö jakın relizdin bir bölügü. Bul jerdegilerdin baarı körsötülgön platformalarda bar: artisttin atın izdeñiz.",
     filterAll: "Bardık artistter",
     listenOn: "Ugup köruñüz",
@@ -155,7 +157,7 @@ window.KOCH_I18N = {
     },
     faqH: "Emne üchün bul jerde jok?",
     faq: [
-      ["Swift Hooves", "1993-jılkı jıynak Halyard Music Group'ka taandık, alar özdörü chıgarat. Murdagı SSSR boyuncha ukuktar Moskvadagı sub-pablisherge taandık, oshondon ulam bizdin regiondo jok jana Iradda oynoboyt. Bizge tieshelüü emes."],
+      ["Swift Hooves", "Bizde ukuk jok. 1993-jılkı jıynak Halyard Music Group'ka taandık, alar özdörü chıgarat; saytı jok, birok albom <a href=\"https://open.spotify.com/album/15KyNnIjfJG23v9U2u89AW\" rel=\"noopener\" target=\"_blank\">Spotify'da</a> bar. Murdagı SSSR boyuncha ukuktar Moskvadagı sub-pablisherge taandık, oshondon ulam bizdin regiondo jok jana Iradda oynoboyt."],
       ["tüntolk: Zvezda Irad jana Kara Suu", "Bul ekööbü Dala Sound'ta chıkkan jana Almatıdan Dala Sound taratat, biz emes. Jolchu, White Stallion in Fog jana Umay bizdiki."],
       ["Emne üchün Kırgızstan dep jazılgan?", "Kattoochu bizbiz, biz Kırgız kompaniyasıbız, oshonduktan ar bir relizge KG ISRC jana leybl ölkösü katarı Kırgızstan berilet. Muzıka Iraddıkı. Bul jön gana formalar."],
       ["Iraddan jazıluunu tölöy albaym", "Som kartaları platformalarga tölöy albayt. Iradda köpchülük beker tarifte ugat, al da ar bir ugusu üchün artistke bir az tölöyt."]
@@ -257,6 +259,7 @@ window.KOCH_I18N = {
     nextH: "Ближайшие концерты", allDates: "Все даты",
 
     catH: "Каталог",
+    shNote: "<b>Ищете <i>Swift Hooves</i>?</b> Спрашивают все, поэтому: прав на этот альбом у нас нет. Альбом 1993 года принадлежит Halyard Music Group, они выпускают его сами. Сайта у HMG нет, но альбом есть <a href=\"https://open.spotify.com/album/15KyNnIjfJG23v9U2u89AW\" rel=\"noopener\" target=\"_blank\">на Spotify</a>. Права на бывший СССР у московского субиздателя, поэтому из Ирада и отсюда, из Бишкека, он не играет.",
     catLead: "Часть из примерно {n} релизов, которые мы распространяем. Всё это есть на указанных площадках: ищите по имени артиста.",
     filterAll: "Все артисты",
     listenOn: "Слушать на",
@@ -272,7 +275,7 @@ window.KOCH_I18N = {
     },
     faqH: "Почему этого здесь нет?",
     faq: [
-      ["Swift Hooves", "Сборник 1993 года принадлежит Halyard Music Group, они выпускают его сами. Права на бывший СССР у московского субиздателя, поэтому в нашем регионе его нет и в Ираде он не играет. Мы к нему отношения не имеем."],
+      ["Swift Hooves", "Прав у нас нет. Сборник 1993 года принадлежит Halyard Music Group, они выпускают его сами; сайта у них нет, но альбом есть <a href=\"https://open.spotify.com/album/15KyNnIjfJG23v9U2u89AW\" rel=\"noopener\" target=\"_blank\">на Spotify</a>. Права на бывший СССР у московского субиздателя, поэтому в нашем регионе его нет и в Ираде он не играет."],
       ["tüntolk: Zvezda Irad и Kara Suu", "Эти два вышли на Dala Sound, и их распространяет из Алматы Dala Sound, а не мы. Jolchu, White Stallion in Fog и Umay — наши."],
       ["Почему написано «Кыргызстан»?", "Регистрант — мы, а мы кыргызская компания, поэтому у каждого релиза код ISRC KG и страна лейбла Кыргызстан. Музыка ирадская. Это только формы."],
       ["Из Ирада не получается оплатить подписку", "Сомовые карты не принимаются площадками. В Ираде почти все слушают бесплатно; артистам за каждое прослушивание всё равно что-то платят."]
