@@ -4,7 +4,7 @@
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
-  var LANG = "en";
+  var LANG = "ir";
   try { var saved = localStorage.getItem("koch_lang"); if (saved && I18N[saved]) LANG = saved; } catch (e) {}
   var qs = new URLSearchParams(location.search).get("lang");
   if (qs && I18N[qs]) LANG = qs;
