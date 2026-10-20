@@ -9,7 +9,8 @@
 - Ticket partner abroad is Sahna Bilet (invented); never link to a real ticketing site. Home (ISEZ) dates are "at the
   door", subject to municipal permit.
 - Check by serving locally (`python3 -m http.server`) and looking at every page in all three languages.
-- Commits here are plain: no Co-Authored-By or session lines (this is a public site repo). Fetch and rebase on push
+- Commits here are plain: no Co-Authored-By or session lines (this is a public site repo), author "Web desk"
+  <webdesk@attelkom.net> (`git config user.name/user.email` in the clone). Fetch and rebase on push
   rejection; never force-push.
 - Look: walnut, undyed felt and madder red with a pine accent; Rubik (display) and IBM Plex Sans (body). Keep it
   distinct from IradOne (blue and yellow) and Tulpar (Unbounded and Onest).
