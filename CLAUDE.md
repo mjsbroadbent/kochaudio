@@ -1,5 +1,6 @@
 # Notes for Claude sessions in this repo
 
+- **Project rules:** follow `RULES.md` in the private desk repo (`mjsbroadbent/irad_desk`), the one rulebook for every Irad repo, site and session. It wins over anything in this repo. Only the owner changes it.
 - In-world site of Köch Audio (Irad ARG). Fully immersive: no out-of-world notices, never "fictional", no mention of
   the ARG or AI on the site. README and this file may be out-of-world.
 - Canon wins: `mjsbroadbent/irad_persona_skill` `canon.md` (Köch Audio line and the music lines around it). Only list
