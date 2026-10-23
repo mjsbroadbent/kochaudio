@@ -155,6 +155,11 @@ dialog h3 { font-size: 19px; margin-bottom: 8px; }
 .foot { margin-top: 72px; background: var(--ink); color: #DCD2C4; padding: 28px 0 32px; }
 .foot-tag { font: 600 18px var(--display); color: var(--kok-light); margin-bottom: 6px; }
 .foot-copy { font-size: 14px; margin: 0; }
+.foot-tulpar { margin: 0 0 10px; font-size: 14px; }
+.foot-tulpar a { display: inline-flex; align-items: center; gap: 8px; color: #F1E9DD; text-decoration: none; }
+.foot-tulpar a:hover span { text-decoration: underline; }
+.foot-tulpar img { width: 20px; height: 20px; border-radius: 5px; }
+.foot-tulpar small { color: #A99C8B; }
 
 /* ---------- small screens ---------- */
 @media (max-width: 760px) {

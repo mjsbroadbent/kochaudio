@@ -114,6 +114,7 @@ window.KOCH_I18N = {
     name: "<i>Köch</i> is the seasonal move to new pasture, the whole household on the road. It is also the old Kuble Soft game, <i>Köch: The Road to Iyık Janyl</i>, which most of our musicians played as children.",
 
     footTag: "Iradi music, carried across.",
+    footTulpar: "Köch Audio on Tulpar",
     footCopy: "© 2026 Köch Audio LLC, Bishkek, Kyrgyz Republic.",
     langLabel: "Language",
 
@@ -232,6 +233,7 @@ window.KOCH_I18N = {
     name: "<i>Köch</i>: jañı jayıtka mezgildik köchüü, bütkül üy-bülö jolgo chıgat. Bul da Kuble Soft'tun eski oyunu, <i>Köch: The Road to Iyık Janyl</i>; muzıkanttarıbızdın köbü bala kezinde oynogon.",
 
     footTag: "Irad muzıkası, arı jetkirilet.",
+    footTulpar: "Köch Audio Tulparda",
     footCopy: "© 2026 Köch Audio JChK, Bishkek, Kırgız Respublikası.",
     langLabel: "Til",
 
@@ -350,6 +352,7 @@ window.KOCH_I18N = {
     name: "<i>Köch</i> — кочёвка, сезонный переход на новое пастбище, когда в дорогу снимается весь дом. А ещё это старая игра Kuble Soft, <i>Köch: The Road to Iyık Janyl</i>, в которую в детстве играли почти все наши музыканты.",
 
     footTag: "Ирадская музыка, перевезённая через границу.",
+    footTulpar: "Köch Audio в Tulpar",
     footCopy: "© 2026 ОсОО «Köch Audio», Бишкек, Кыргызская Республика.",
     langLabel: "Язык",
 
