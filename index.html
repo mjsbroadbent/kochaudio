@@ -83,12 +83,19 @@
         <p class="shnote" data-i="shNote"></p>
         <div class="chips" id="artistChips" role="group"></div>
         <ul class="releases" id="releases"></ul>
+        <h2 data-i="lyIndexH">Lyrics</h2>
+        <p class="lead" data-i="lyIndexLead"></p>
+        <ul class="lyindex" id="lyIndex"></ul>
         <h2 data-i="faqH">Why isn't it here?</h2>
         <div class="faq" id="faq"></div>
       </div>
     </section>
 
     <!-- LIVE -->
+    <section class="page" id="p-lyrics" hidden>
+      <div class="wrap" id="lyrics"></div>
+    </section>
+
     <section class="page" id="p-live" hidden>
       <div class="wrap">
         <h1 data-i="liveH">Live</h1>
@@ -162,6 +169,7 @@
 
   <script src="data.js"></script>
   <script src="i18n.js"></script>
+  <script src="lyrics.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

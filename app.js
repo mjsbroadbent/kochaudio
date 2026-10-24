@@ -1,6 +1,6 @@
 (function () {
   "use strict";
-  var D = window.KOCH, I18N = window.KOCH_I18N;
+  var D = window.KOCH, I18N = window.KOCH_I18N, LY = window.KOCH_LYRICS || [];
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
 
@@ -71,15 +71,59 @@
         '<div class="ryear">' + r.year + "</div>" +
         '<div class="rmain"><h3>' + esc(r.title) + (r.alt ? ' <span class="alt">(' + esc(r.alt) + ")</span>" : "") + "</h3>" +
         '<p class="rart">' + esc(r.artist) + ' <span class="rtype">' + esc(t.type[r.type]) + "</span></p>" + note +
+        lyricsLinks(r) +
         '<p class="pl">℗ ' + r.p + " " + esc(r.label) + " under exclusive licence to Köch Audio</p></div>" +
         '<div class="rlisten"><span class="lo">' + esc(t.listenOn) + "</span>" + D.platforms.map(function (p) {
           var u = r.links && r.links[p];
           return u ? '<a class="pf" href="' + esc(u) + '" target="_blank" rel="noopener">' + esc(p) + "</a>" : '<span class="pf">' + esc(p) + "</span>";
         }).join("") + "</div></li>";
     }).join("");
+    var groups = [];
+    LY.forEach(function (l) {
+      var key = l.artist + " \u2013 " + l.release, g = groups.filter(function (x) { return x.key === key; })[0];
+      if (!g) groups.push(g = { key: key, artist: l.artist, release: l.release, songs: [] });
+      g.songs.push(l);
+    });
+    $("#lyIndex").innerHTML = groups.map(function (g) {
+      g.songs.sort(function (a, b) { return (a.track || 99) - (b.track || 99); });
+      return "<li><b>" + esc(g.artist) + "</b>, <i>" + esc(g.release) + "</i>: " + g.songs.map(function (l) {
+        return '<a href="#/lyrics/' + l.slug + '">' + esc(l.title) + "</a>";
+      }).join(", ") + "</li>";
+    }).join("");
     $("#faq").innerHTML = t.faq.map(function (f) {
       return "<details><summary>" + esc(f[0]) + "</summary><p>" + f[1] + "</p></details>";
     }).join("");
+  }
+
+  /* ---------- lyrics ---------- */
+  function songsOf(r) {
+    return LY.filter(function (l) { return l.release === r.title && l.artist === r.artist; })
+      .sort(function (a, b) { return (a.track || 99) - (b.track || 99); });
+  }
+  function lyricsLinks(r) {
+    var songs = songsOf(r);
+    if (!songs.length) return "";
+    return '<p class="rly"><span class="lo">' + esc(T().lyrics) + ":</span> " + songs.map(function (l) {
+      return '<a href="#/lyrics/' + l.slug + '">' + esc(l.title) + "</a>";
+    }).join(", ") + "</p>";
+  }
+  function renderLyrics(slug) {
+    var t = T(), l = LY.filter(function (x) { return x.slug === slug; })[0];
+    var back = '<p class="lyback"><a href="#/catalogue">' + esc(t.lyBack) + "</a></p>";
+    if (!l) { $("#lyrics").innerHTML = back + "<p>" + esc(t.lyNone) + "</p>"; return; }
+    var two = l.stanzas.some(function (st) { return st.some(function (x) { return x.length > 1; }); });
+    var head = two ? '<div class="lyrow lyhead"><span>' + esc(t.lyOrig) + "</span><span>" + esc(t.lyTrans) + "</span></div>" : "";
+    var body = l.stanzas.map(function (st) {
+      return '<div class="stanza">' + st.map(function (x) {
+        return two ? '<div class="lyrow"><span class="o">' + esc(x[0]) + '</span><span class="e">' + esc(x[1] || "") + "</span></div>"
+                   : '<div class="lyrow one"><span class="o">' + esc(x[0]) + "</span></div>";
+      }).join("") + "</div>";
+    }).join("");
+    $("#lyrics").innerHTML = back +
+      "<h1>" + esc(l.title) + (l.alt ? ' <span class="alt">(' + esc(l.alt) + ")</span>" : "") + "</h1>" +
+      '<p class="rart">' + esc(l.artist) + ". " + esc(l.track ? fill(t.lyTrack, { n: l.track, r: l.release }) : fill(t.lyFrom, { r: l.release })) + "</p>" +
+      '<div class="lyrics' + (two ? " two" : "") + '">' + head + body + "</div>" +
+      (two ? '<p class="lynote">' + esc(t.lyNote) + "</p>" : "");
   }
 
   /* ---------- live ---------- */
@@ -156,13 +200,17 @@
     $$("[data-lang]").forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.lang === LANG); });
     $("#footMail").textContent = mail("info");
   }
-  function renderAll() { applyStatic(); renderHome(); renderCatalogue(); renderLive(); renderArtists(); renderAbout(); }
+  function renderAll() { applyStatic(); renderHome(); renderCatalogue(); renderLive(); renderArtists(); renderAbout();
+    var ly = (location.hash || "").match(/^#\/?lyrics\/([\w-]+)/); if (ly) renderLyrics(ly[1]); }
 
   var PAGES = ["home", "catalogue", "live", "artists", "about"];
   function route() {
     var h = (location.hash || "").replace(/^#\/?/, "").split("?")[0];
-    var page = PAGES.indexOf(h) >= 0 ? h : "home";
-    PAGES.forEach(function (p) { $("#p-" + p).hidden = p !== page; });
+    var ly = h.match(/^lyrics\/([\w-]+)$/);
+    if (ly) renderLyrics(ly[1]);
+    var page = ly ? "lyrics" : PAGES.indexOf(h) >= 0 ? h : "home";
+    PAGES.concat("lyrics").forEach(function (p) { $("#p-" + p).hidden = p !== page; });
+    if (ly) page = "catalogue";
     $$(".nav a").forEach(function (a) { if (a.dataset.page === page) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
     window.scrollTo(0, 0);
   }
